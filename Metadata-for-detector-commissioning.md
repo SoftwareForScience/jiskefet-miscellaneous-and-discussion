@@ -43,7 +43,7 @@ Can reach PetaBytes.                                |                           
 
 # FLP general info
 
-This section lists the information which is stored at the FLP level, i.e., one value for each FLP role (note: multiple FLP roles might coexist in the same host).  
+This section lists the information which is stored at the FLP level, i.e., one value for each FLP role, where each FLP role is related to one run. (note: multiple FLP roles might coexist in the same host).   
 
 | **Field**          | **Description**                                                                                       | **Example**        |
 | ------------------ | ----------------------------------------------------------------------------------------------------- | ------------------ |
@@ -62,7 +62,7 @@ Updated regularly.               |                    |
 
 # EPN general info
 
-This section lists the information which is stored at the EPN level, i.e., one value for each EPN role (note: multiple EPN roles might coexist in the same host).  
+This section lists the information which is stored at the EPN level, i.e., one value for each EPN role (note: multiple EPN roles might coexist in the same host). EPNs can be added or removed during a run. For example, an EPN could be in the run at the beginning, leave mid-run and later rejoin. 
 
 | **Field**             | **Description**                                                  | **Example**        |
 | --------------------- | ---------------------------------------------------------------- | ------------------ |
@@ -74,7 +74,7 @@ Can reach PetaBytes. |                    |
 
 # Detector general info
 
-This section lists the information which is stored for each detector, i.e., one value for each detector. 
+This section lists the information which is stored for each detector, i.e., one value for each detector per run. 
 
 | **Field** | **Description**                      | **Example**              |
 | --------- | ------------------------------------ | ------------------------ |
