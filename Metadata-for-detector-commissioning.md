@@ -1,5 +1,7 @@
 # Metadata for detector commissioning
 
+| Version | Date | Comment |
+|-|-|-|
 | 1 | 2018-06-18 | Initial version. Contains bare minimum for first usable release of an O2 bookkeeping system. |
 
 # Introduction
@@ -15,6 +17,7 @@ It does not try to say how this metadata will be implemented in a database schem
 Missing: 
 
 - tags
+
 | **Field**                     | **Description**                                                                                                                                             | **Example**               |
 | ----------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
 | Run number                    | Integer ID of a specific data taking session. 
