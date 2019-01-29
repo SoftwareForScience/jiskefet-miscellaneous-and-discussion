@@ -24,7 +24,7 @@ Concerning the **Update mode** of the fields:
 - Derived from FLPs: aggregated from fields in the FLPs table(s), normally a SUM of partial counters of each FLP
 - Derived from EPNs: aggregated from fields in the EPNs table(s), normally a SUM of partial counters of each EPN
 
-# Run general info
+# Run general info (NEEDED FOR v1)
 - This section lists the information which is stored at the run level, i.e., one global value per run.  
 - Some of the data might be derived from other lower-level data (example: “Data volume readout” is the sum of the “Data volume readout” of all the individual Readout processes running in each FLP). 
 - Data insertion might be split in different calls. 
@@ -50,8 +50,7 @@ Missing:
 | Data volume readout           | Total data volume read out from the detectors by the O2 system in bytes. Can reach PetaBytes. | | During Run | Run number | Derived from FLPs |
 | Data volume timeframe builder | Total data volume assembled in full timeframes by the different timeframe builders running in the EPNs. Can reach PetaBytes. | | During Run | Run number | Derived from EPNs |
 
-# FLP general info
-
+# FLP general info (NEEDED for v1)
 This section lists the information which is stored at the FLP level, i.e., one value for each FLP role, where each FLP role is related to one run. (note: multiple FLP roles might coexist in the same host).   
 
 | **Field**          | **Description**  | **Example** | **Update time** | **Update Key** | **Update mode** |
@@ -63,7 +62,6 @@ This section lists the information which is stored at the FLP level, i.e., one v
 | Data volume OUT    | data volume sent to EPNs by this FLP in bytes. Can reach PetaBytes. Updated regularly. | | During run | Run number, FLP name | Insert |
 
 # EPN general info
-
 This section lists the information which is stored at the EPN level, i.e., one value for each EPN role (note: multiple EPN roles might coexist in the same host). EPNs can be added or removed during a run. For example, an EPN could be in the run at the beginning, leave mid-run and later rejoin. 
 
 | **Field**             | **Description** | **Example**        | **Update time** | **Update Key** | **Update mode** | 
@@ -74,7 +72,6 @@ This section lists the information which is stored at the EPN level, i.e., one v
 | Data volume processed | data volume processed by this EPN in bytes. Can reach PetaBytes. | | During run | Run number, EPN name | Insert | 
 
 # Detector general info
-
 This section lists the information which is stored for each detector, i.e., one value for each detector per run. 
 
 | **Field** | **Description**                      | **Example**              | **Update time** | **Update Key** | **Update mode** | 
@@ -82,8 +79,7 @@ This section lists the information which is stored for each detector, i.e., one 
 | Name      | detector name                        | ITS                      | At SOR          | Run number     | Insert          |
 | quality   | quality of the run for this detector | ‘Good’, ‘Bad’, ‘Unknown’ | After run       | Run number, detector | Insert    |
 
-# Log Entries general info
-
+# Log Entries general info (NEEDED for v1)
 This section lists the information which is stored with each log entry. 
 Missing: 
 
@@ -98,8 +94,7 @@ Missing:
 | body          |                 |             |
 | creation time |                 |             |
 
-# Files general info
-
+# Files general info (NEEDED for v1)
 This section lists the information which is stored for each file. 
 
 | **Field**     | **Description** | **Example**        |
