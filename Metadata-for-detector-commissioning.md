@@ -11,6 +11,19 @@
 
 This document describes the metadata needed for detector commissioning.
 
+Concerning the **Update time** of the fields:
+- At SOR: synchronously at Start of Run 
+- At EOR: synchronously at End of Run 
+- During Run: periodically during the run, normally to update/overwrite counters
+- After EOR: asynchronously after the run finishes, normally by humans
+
+Concerning the **Update key** of the fields, it indicates which key will be provided to know which database record to update. 
+
+Concerning the **Update mode** of the fields: 
+- Insert: direct insert via the API
+- Derived from FLPs: aggregated from fields in the FLPs table(s), normally a SUM of partial counters of each FLP
+- Derived from EPNs: aggregated from fields in the EPNs table(s), normally a SUM of partial counters of each EPN
+
 # Run general info
 - This section lists the information which is stored at the run level, i.e., one global value per run.  
 - Some of the data might be derived from other lower-level data (example: “Data volume readout” is the sum of the “Data volume readout” of all the individual Readout processes running in each FLP). 
