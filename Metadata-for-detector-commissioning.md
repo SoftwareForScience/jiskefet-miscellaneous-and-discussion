@@ -3,6 +3,8 @@
 | Version | Date | Comment |
 |-|-|-|
 | 1 | 2018-06-18 | Initial version. Contains bare minimum for first usable release of an O2 bookkeeping system. |
+| 2 | 2018-06-22 | Add clarification on amount of entries per run. Add info about EPNs being able to leave/join run dynamically. |
+
 
 # Introduction
 
