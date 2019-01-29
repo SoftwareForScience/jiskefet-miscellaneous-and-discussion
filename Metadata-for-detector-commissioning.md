@@ -41,6 +41,7 @@ Missing:
 | TRG End Time                  | Time when Trigger subsystem was stopped. | | At EOR | Run number | Insert |
 | O2 End time                   | Time when Run was completely stopped. | | At EOR | Run number | Insert |
 | Activity ID                   | Control ID string. Can be a long hash, 32 or 64 character long. | | At SOR | Run number | Insert |
+| Run Type	                    | Type of run. Might be replaced by tags.	| PHYSICS, COSMICS, TECHNICAL | At SOR | Run number | Insert |
 | Run Quality                   | Overall quality of the data from O2 point of view. | Good, Bad, Unknown | At EOR | Run number | Insert |
 | # of detectors                | Number of detectors in the Run. | | At SOR | Run number | Insert |
 | # of FLPs                     | Number of FLP nodes in the Run. | 250 | At SOR | Run number | Insert |
