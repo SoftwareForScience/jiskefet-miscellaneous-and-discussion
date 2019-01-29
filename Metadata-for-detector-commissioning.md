@@ -21,6 +21,7 @@ Concerning the **Update key** of the fields, it indicates which key will be prov
 
 Concerning the **Update mode** of the fields: 
 - Insert: direct insert via the API
+- Replace: direct insert via the API, new value replaces existing one
 - Derived from FLPs: aggregated from fields in the FLPs table(s), normally a SUM of partial counters of each FLP
 - Derived from EPNs: aggregated from fields in the EPNs table(s), normally a SUM of partial counters of each EPN
 
@@ -58,9 +59,9 @@ This section lists the information which is stored at the FLP level, i.e., one v
 | ------------------ | ---------------- | ----------- |-----------------|----------------|-----------------|
 | Name               | FLP name.  | FLP-TPC-1 | At SOR | Run number | Insert | 
 | Hostname           | FLP hostname.  | someserver.cern.ch | At SOR | Run number, FLP name | Insert |
-| # of subtimeframes | Number of subtimeframes processed in this FLP. Updated regularly. | 50 | During run | Run number, FLP name | Insert |
-| Data volume IN     | data volume read out from the detector by this FLP in bytes. Can reach PetaBytes. Updated regularly. | | During run | Run number, FLP name | Insert |
-| Data volume OUT    | data volume sent to EPNs by this FLP in bytes. Can reach PetaBytes. Updated regularly. | | During run | Run number, FLP name | Insert |
+| # of subtimeframes | Number of subtimeframes processed in this FLP. Updated regularly. | 50 | During run | Run number, FLP name | Replace |
+| Data volume IN     | data volume read out from the detector by this FLP in bytes. Can reach PetaBytes. Updated regularly. | | During run | Run number, FLP name | Replace |
+| Data volume OUT    | data volume sent to EPNs by this FLP in bytes. Can reach PetaBytes. Updated regularly. | | During run | Run number, FLP name | Replace |
 
 # EPN general info
 This section lists the information which is stored at the EPN level, i.e., one value for each EPN role (note: multiple EPN roles might coexist in the same host). EPNs can be added or removed during a run. For example, an EPN could be in the run at the beginning, leave mid-run and later rejoin. 
@@ -69,8 +70,8 @@ This section lists the information which is stored at the EPN level, i.e., one v
 | --------------------- | --------------- | ------------------ |-----------------|----------------|-----------------|
 | Name                  | EPN name | EPN-1 | At SOR | Run number | Insert | 
 | Hostname              | EPN hostname | someserver.cern.ch | At SOR | Run number, EPN name | Insert | 
-| # of timeframes       | Number of timeframes processed in this FLP. | 50 | During run | Run number, EPN name | Insert | 
-| Data volume processed | data volume processed by this EPN in bytes. Can reach PetaBytes. | | During run | Run number, EPN name | Insert | 
+| # of timeframes       | Number of timeframes processed in this FLP. | 50 | During run | Run number, EPN name | Replace | 
+| Data volume processed | data volume processed by this EPN in bytes. Can reach PetaBytes. | | During run | Run number, EPN name | Replace | 
 
 # Detector general info
 This section lists the information which is stored for each detector, i.e., one value for each detector per run. 
