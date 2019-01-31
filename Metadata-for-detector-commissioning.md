@@ -4,7 +4,7 @@
 |-|-|-|
 | 1 | 2018-06-18 | Initial version. Contains bare minimum for first usable release of an O2 bookkeeping system. |
 | 2 | 2018-06-22 | Add clarification on amount of entries per run. Add info about EPNs being able to leave/join run dynamically. |
-| 3 | 2019-06-29 | Update on detector commissioning minimum requirements |
+| 3 | 2019-06-31 | Update on detector commissioning minimum requirements |
 
 
 # Introduction
@@ -60,8 +60,10 @@ This section lists the information which is stored at the FLP level, i.e., one v
 | Name               | FLP name.  | FLP-TPC-1 | At SOR | Run number | Insert | 
 | Hostname           | FLP hostname.  | someserver.cern.ch | At SOR | Run number, FLP name | Insert |
 | # of subtimeframes | Number of subtimeframes processed in this FLP. Updated regularly. | 50 | During run | Run number, FLP name | Replace |
-| Data volume IN     | data volume read out from the detector by this FLP in bytes. Can reach PetaBytes. Updated regularly. | | During run | Run number, FLP name | Replace |
-| Data volume OUT    | data volume sent to EPNs by this FLP in bytes. Can reach PetaBytes. Updated regularly. | | During run | Run number, FLP name | Replace |
+| Readout equipment bytes | data volume out from the readout 'equipment' component in bytes. Can reach PetaBytes. Updated regularly. | | During run | Run number, FLP name | Replace |
+| Readout recording bytes | data volume out from the readout 'recording' component in bytes. Can reach PetaBytes. Updated regularly. | | During run | Run number, FLP name | Replace |
+| Readout FairMQ bytes | data volume out from the readout 'fmq' component in bytes. Can reach PetaBytes. Updated regularly. | | During run | Run number, FLP name | Replace |
+
 
 # EPN general info
 This section lists the information which is stored at the EPN level, i.e., one value for each EPN role (note: multiple EPN roles might coexist in the same host). EPNs can be added or removed during a run. For example, an EPN could be in the run at the beginning, leave mid-run and later rejoin. 
