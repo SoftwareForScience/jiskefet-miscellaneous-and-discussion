@@ -4,7 +4,8 @@
 |-|-|-|
 | 1 | 2018-06-18 | Initial version. Contains bare minimum for first usable release of an O2 bookkeeping system. |
 | 2 | 2018-06-22 | Add clarification on amount of entries per run. Add info about EPNs being able to leave/join run dynamically. |
-| 3 | 2019-06-31 | Update on detector commissioning minimum requirements |
+| 3 | 2019-01-31 | Update on detector commissioning minimum requirements |
+| 4 | 2019-03-26 | Update on detector commissioning minimum requirements |
 
 
 # Introduction
@@ -47,10 +48,8 @@ Missing:
 | # of detectors                | Number of detectors in the Run. | | At SOR | Run number | Insert |
 | # of FLPs                     | Number of FLP nodes in the Run. | 250 | At SOR | Run number | Insert |
 | # of EPNs                     | Number of EPN nodes in the Run. | 1500 | At SOR | Run number | Insert |
-| # of timeframes               | Total number of timeframes processed by the system. Can reach 10s or 100s of millions. | 1000 | During Run | Run number | Derived from FLPs |
-| # of subtimeframes            | Total number of subtimeframes processed by the O2 system. Can reach 10s or 100s of millions. Is the sum of the # of subtimeframes of all FLPs in the Run. | 50000  | Derived from FLPs |
-| Data volume readout           | Total data volume read out from the detectors by the O2 system in bytes. Can reach PetaBytes. | | During Run | Run number | Derived from FLPs |
-| Data volume timeframe builder | Total data volume assembled in full timeframes by the different timeframe builders running in the EPNs. Can reach PetaBytes. | | During Run | Run number | Derived from EPNs |
+| # of subtimeframes            | Total number of subtimeframes processed by the O2 system. Can reach 10s or 100s of millions. Is the sum of the # of subtimeframes of all FLPs in the Run. | 50000  | During Run | Run number | Derived from FLPs |
+| Data volume readout           | Total data volume read out from the detectors ('equipment' component) by the O2 system in bytes. Can reach PetaBytes. | | During Run | Run number | Derived from FLPs |
 
 # FLP general info (NEEDED for v1)
 This section lists the information which is stored at the FLP level, i.e., one value for each FLP role, where each FLP role is related to one run. (note: multiple FLP roles might coexist in the same host).   
